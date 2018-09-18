@@ -1,45 +1,80 @@
-*{
-    font-family: verdana;
-    margin: 0;
-}
-
 body{
-    background-image: linear-gradient(to bottom right, rgb(222, 209, 235), rebeccapurple);
+    background-image: linear-gradient(to bottom right, white, rgb(16, 238, 16));
     background-size: cover;
     background-repeat: no-repeat; /*ensures that background isnt repeat of same image*/
     background-attachment: fixed; /*ensures that background is static regardless of scroll*/
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; /*changes font*/
+    font-family: 'Comfortaa', cursive;
     font-size: 20px;
 }
-.head{
-    background-image: linear-gradient(to right, white, grey);
-    margin-top: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    border: 6px groove rebeccapurple;
-    height: 216px;
-    font-size: 25px;
-}
-.logo{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 25px;
-}
-.wrapper{
+/* /////////////////////////////////////////////////////////////////////// */
+/* top bar */
+.header{
+    /* contains general info for the header */
     width: 100%;
-    max-width: 960px;
+}
+.flex-header{
+    /* contains data for the entire flexbox that makes up the header */
+    display: flex;
+    justify-content: flex-start;
+    background-image: linear-gradient(to right, rgb(238, 238, 238), rebeccapurple);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.topbox{
+    /* contains info for the boxes that make up the header */
+    height: 250px;
+    flex-grow: 1;
+    border-radius: 10px;
+    min-width: 200px;
+}
+/* below each contain info for each specific box */
+.logo{
+    width: 100%;
+    display: block;
+}
+.headtext{
+    text-align: center;
+}
+.mic{
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.one{
+
+}
+.two{
+    font-size: 100%;
+}
+.three{
+
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* sidebar/contacts */
+
+.sidebar{
+    float: right;
+    width: 100%;
+    max-width: 200px;
     margin: 0 auto;
 }
-.flex-container{
+.flex-side{
+    flex-direction: column;
+    margin-top: 40px;
+    margin-right: 100px;
     display: flex;
-    flex-wrap: wrap;
 }
 .box{
     height: 100px;
-    min-width: 100px;
+    min-width: 200px;
 }
 .about{
-    background: linear-gradient(to right, green, greenyellow);
-    flex-grow: 1;
+    background-color: rgb(132, 132, 243);
+}
+.social{
+    background-color: rgb(132, 132, 243);
+
 }
