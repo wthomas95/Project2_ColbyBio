@@ -6,6 +6,54 @@ body{
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
 }
+/* ////////////////////////////////////////////////////////// */
+/* top menu*/
+nav{
+    margin-left: 20px;
+    background: #333;
+    border-radius: 20px;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav a{
+    text-decoration: none;
+    text-align: left;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+nav a:hover{
+    background-color: rebeccapurple;
+    border-radius: 20px;
+}
+@media screen and (min-width: 768px){
+    nav ul{
+        display: flex;
+    }
+}
+.headerbar{
+    position: fixed;
+}
+/* /////////////////////////////////////////////////////////////////////// */
+/* Dropdown Contact */
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
 /* /////////////////////////////////////////////////////////////////////// */
 /* top bar */
 .header{
@@ -16,7 +64,7 @@ body{
     /* contains data for the entire flexbox that makes up the header */
     display: flex;
     justify-content: flex-start;
-    background-image: linear-gradient(to right, rgb(238, 238, 238), rebeccapurple);
+    background-image: linear-gradient(to right,white, purple);
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 20px;
@@ -29,18 +77,10 @@ body{
     min-width: 200px;
 }
 /* below each contain info for each specific box */
-.logo{
-    width: 100%;
-    display: block;
-}
 .headtext{
     text-align: center;
-}
-.mic{
-    height: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    text-shadow: 2px 2px white;
+    font-family: 'Oswald', sans-serif;
 }
 .one{
 
@@ -52,29 +92,107 @@ body{
 
 }
 
-/* ////////////////////////////////////////////////////////// */
-/* sidebar/contacts */
-
-.sidebar{
-    float: right;
+/* //////////////////////////////////////////////////////////////// */
+/* spinny cube */
+.cube-container{
+    margin-left: 20px;
+    height: 200px;
+    perspective: 300;
+    position: relative;
+    width: 200px;
+}
+.cube {
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-100px);
+    transform-style: preserve-3d;
     width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
 }
-.flex-side{
-    flex-direction: column;
-    margin-top: 40px;
-    margin-right: 100px;
-    display: flex;
+.spin {
+    cursor: pointer;
+    transform-style: preserve-3d;
 }
-.box{
-    height: 100px;
-    min-width: 200px;
-}
-.about{
-    background-color: rgb(132, 132, 243);
-}
-.social{
-    background-color: rgb(132, 132, 243);
 
+@keyframes spin-vertical {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+.cube:hover{
+    animation: spin-vertical 5s infinite linear;
+}
+
+.side{
+    background: transparent;
+    height: 200px;
+    line-height: 200px;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+}
+.front {
+    transform: translateZ(100px);
+}
+.back{
+    transform: rotateY(180deg) translateZ(100px);
+}
+.right{
+    transform: rotateY(90deg) translateZ(100px);
+}
+.left{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+/* //////////////////////////////////////////////////////////////// */
+/* IMAGES */
+.logo{
+    width: 100%;
+    display: block;
+}
+.mic{
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.email{
+    margin-top: 5px;
+    height: 30px;
+    float: left;
+}
+.linkedin{
+    margin-top: 5px;
+    height: 30px;
+    float: left;
+}
+.facebook{
+    margin-top: 5px;
+    height: 30px;
+    float: left;
+}
+.twitter{
+    margin-top: 5px;
+    height: 30px;
+    float: left;
+}
+.github{
+    margin-top: 5px;
+    height: 30px;
+    float: left;
+}
+.instagram{
+    margin-top: 5px;
+    height: 30px;
+    float: left;
+}
+.colby{
+    height: 100%;
+}
+.colby2{
+    height: 100%;
+}
+.colby3{
+    height: 100%;
+}
+.colby4{
+    height: 100%;
 }
