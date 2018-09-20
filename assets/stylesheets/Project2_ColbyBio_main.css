@@ -10,6 +10,7 @@ body{
 /* top menu*/
 nav{
     margin-left: 20px;
+    margin-right: 40px;
     background: #333;
     border-radius: 20px;
 }
@@ -35,6 +36,7 @@ nav a:hover{
 }
 .headerbar{
     position: fixed;
+    width: 100%;
 }
 /* /////////////////////////////////////////////////////////////////////// */
 /* Dropdown Contact */
@@ -145,7 +147,7 @@ nav a:hover{
 /* //////////////////////////////////////////////////////////////// */
 /* IMAGES */
 .logo{
-    width: 100%;
+    width: 90%;
     display: block;
 }
 .mic{
