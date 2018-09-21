@@ -1,18 +1,28 @@
 body{
-    background-image: linear-gradient(to bottom right, white, rgb(16, 238, 16));
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat; /*ensures that background isnt repeat of same image*/
     background-attachment: fixed; /*ensures that background is static regardless of scroll*/
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
 }
+.page{
+    background-image: linear-gradient(to bottom right, grey, black);
+}
 /* ////////////////////////////////////////////////////////// */
 /* top menu*/
+.headerbar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
 nav{
     margin-left: 20px;
     margin-right: 40px;
     background: #333;
     border-radius: 20px;
+    position: relative;
+    z-index: 2;
 }
 nav ul{
     list-style-type: none;
@@ -34,10 +44,7 @@ nav a:hover{
         display: flex;
     }
 }
-.headerbar{
-    position: fixed;
-    width: 100%;
-}
+
 /* /////////////////////////////////////////////////////////////////////// */
 /* Dropdown Contact */
 .dropdown{
@@ -50,7 +57,7 @@ nav a:hover{
     background-color: gray;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 3;
 
 }
 .dropdown:hover .dropdown-content{
@@ -70,6 +77,7 @@ nav a:hover{
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 20px;
+    margin-bottom: 30px;
 }
 .topbox{
     /* contains info for the boxes that make up the header */
@@ -84,24 +92,49 @@ nav a:hover{
     text-shadow: 2px 2px white;
     font-family: 'Oswald', sans-serif;
 }
-.one{
-
-}
-.two{
+.topbox.two{
     font-size: 100%;
 }
-.three{
-
+/* //////////////////////////////////////////////////////////////// */
+/* GRID */
+.content{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    float: center;
+    z-index: -1;
+    border: white;
 }
-
+.content div{
+    padding: 30px;
+    background: transparent;
+    align-items: left;
+}
+.content div:nth-child(even){
+    background: transparent;
+}
+.about{
+    width: 90%;
+}
+/* //////////////////////////////////////////////////////////////// */
+/* content text */
+.contenthead{
+    vertical-align: text-bottom;
+    text-align: center;
+    text-shadow: 2px 2px white;
+    color: rebeccapurple;
+}
 /* //////////////////////////////////////////////////////////////// */
 /* spinny cube */
 .cube-container{
-    margin-left: 20px;
     height: 200px;
     perspective: 300;
     position: relative;
     width: 200px;
+    z-index: 0;
 }
 .cube {
     height: 100%;
@@ -129,7 +162,6 @@ nav a:hover{
     height: 200px;
     line-height: 200px;
     position: absolute;
-    text-align: center;
     width: 200px;
 }
 .front {
@@ -144,6 +176,27 @@ nav a:hover{
 .left{
     transform: rotateY(-90deg) translateZ(100px);
 }
+/* //////////////////////////////////////////////////////////////// */
+/* BOTTOM IMAGE FLEXBOX */
+.imagecontainer{
+    width: 100%;
+}
+.fleximg{
+    display: flex;
+    justify-content: flex-start;
+    background-image: linear-gradient(to right, grey, gold);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.box{
+    height: 250px;
+    flex-grow: 1;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
 /* //////////////////////////////////////////////////////////////// */
 /* IMAGES */
 .logo{
@@ -196,5 +249,18 @@ nav a:hover{
     height: 100%;
 }
 .colby4{
+    height: 100%;
+}
+.graduate{
+    height: 300px;
+    float: center;
+}
+.basketball{
+    height: 100%;
+}
+.code{
+    height: 100%;
+}
+.knight{
     height: 100%;
 }
