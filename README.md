@@ -14,3 +14,8 @@
 | :--------- | :---------: | :-----: |
 | Flexbox    |  Used for webpage responsivity design, able to wrap on page, and separate elements easily | Flexbox was used on the header bar, and the two image bars on the top and bottom of the page |
 | CSS Grid   | CSS Grid is used for making a 'layout for a page' | I should have implemented CSS grid for more of the project and used fewer flex boxes. CSS grid was used only for the body text and images, but I would have liked to have used it for the top and bottom image bars as well |
+
+[Here is an example of the webpage 'header'](https://i.imgur.com/lrpFWjy.png)
+![Reference header][header]
+
+[header]: https://i.imgur.com/lrpFWjy.png
